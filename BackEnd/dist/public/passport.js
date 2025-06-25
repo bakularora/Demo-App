@@ -48,9 +48,9 @@ const generateTokens = (user) => {
     return { accessToken, refreshToken };
 };
 passport.use(new GoogleStrategy({
-    clientID: process.env.Google_Client_Id,
-    clientSecret: process.env.Google_Client_Secret,
-    callbackURL: process.env.Google_Auth_Callback_Url,
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: process.env.GOOGLE_CALLBACK_URL,
     passReqToCallback: true,
 }, (req, accessToken, refreshToken, profile, done) => __awaiter(void 0, void 0, void 0, function* () {
     var _a, _b, _c;
